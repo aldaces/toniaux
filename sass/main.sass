@@ -1,0 +1,79 @@
+@import "bourbon"
+@import "vars.sass"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//Custom Styles Here
+
+
+.headline
+	height: 85px
+	display: flex
+	justify-content: space-between
+	padding: 25px 120px
+	background: $gray
+	align-items: center
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05)
+	.logo
+		font-size: 19px
+		font-family: GraphikM, sans-serif
+		text-align: center
+	.menu
+		color: $fontcolor
+		&-list
+			display: flex
+			justify-content: space-between
+			align-items: center
+			&-item
+				margin: 0 20px
+			.active
+				padding: 9px 16px
+				gap: 10px
+				background-color: white
+				border-radius: 17px
+				width: 134px
+			img
+				margin-left: 10px
+
+.banner
+	background-color: $gray
+	display: flex
+	justify-content: space-around
+	padding: 125px 120px 60px 120px
+	&-text-title
+		font-family: GraphikM, sans-serif
+		font-size: 78px
+		line-height: 94%
+		letter-spacing: -0.063em
+		margin-bottom: 40px
+	&-text-desc
+		font-size: 19px
+		line-height: 118%
+		width: 489px
+
+//ALWAYS END
+@import "media"
