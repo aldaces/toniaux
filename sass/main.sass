@@ -120,6 +120,9 @@ body textarea:required:valid
 			width: 50%
 			.img
 				text-align: center
+				width: 583px
+				img
+					width: 100%
 			a
 				text-decoration: none
 				color: $fontcolor
@@ -146,8 +149,113 @@ body textarea:required:valid
 			background: #F9F8F5
 			border-radius: 50px
 			text-align: center
+.skills
+	background: #191B1D
+	padding: 60px 120px
+	&-title
+		margin: 20px
+		color: white
+		font-size: 18px
+		font-family: GraphikM, sans-serif
+	&-body
+		display: flex
+		justify-content: space-between
+		.accordion
+			align-self: center
+			margin-right: 20px
+			.tab
+				position: relative
+				margin-bottom: 1px
+				width: 100%
+				color: #fff
+				overflow: hidden
+				padding: 20px 0
+				border-bottom: 1px solid rgba(255, 255, 255, 0.14)
+				input
+					position: absolute
+					opacity: 0
+					z-index: -1
+					&:checked ~ .tab-content
+						max-height: 100vh
+				label
+					position: relative
+					display: block
+					padding: 0 0 0 1em
+					font-size: 28px
+					line-height: 108%
+					letter-spacing: -0.063em
+					cursor: pointer
+			.tab-content
+				max-height: 0
+				overflow: hidden
+				transition: max-height .35s
+				p
+					padding-left: 30px
+					width: 60%
+					line-height: 126%
+					color: rgba(255, 255, 255, 0.5)
 
+.motion
+	padding: 40px 0
+	&-head
+		display: flex
+		justify-content: space-between
+		margin: 80px 50px
+		&-title
+			font-size: 32px
+			color: #191B1D
+			font-family: GraphikM, sans-serif
+			letter-spacing: -0.033em
+			align-self: center
+		&-desc
+			width: 532px
 
+	&-slider
+		position: relative
+		ul
+			list-style: none
+			position: absolute
+			top: -70px
+			left: 10px
+			display: flex
+			cursor: pointer
+			li.prev
+				margin-right: 10px
+
+.footer
+	display: flex
+	justify-content: space-between
+	padding: 50px 110px
+	border-top: 1px solid rgba(0, 0, 0, 0.1)
+	&-logo
+		font-size: 19px
+		font-family: GraphikM, sans-serif
+	&-links ul
+		list-style: none
+		font-size: 19px
+		padding: 0
+		margin: 0
+		a
+			text-decoration: none
+			color: #191B1D
+	&-contacts
+		&-button
+			width: 141px
+			height: 29px
+			line-height: 29px
+			background: #E8E8E8
+			border-radius: 85px
+			text-align: center
+			margin-bottom: 10px
+		&-email a
+			font-size: 19px
+			line-height: 118%
+			letter-spacing: -0.063em
+			color: #191B1D
+.date
+	text-align: center
+	font-size: 15px
+	color: rgba(0, 0, 0, 0.4)
 
 
 //ALWAYS END
