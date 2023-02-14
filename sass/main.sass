@@ -31,72 +31,83 @@ body textarea:required:valid
 
 
 .headline
-	height: 85px
 	display: flex
 	justify-content: space-between
-	padding: 0 120px
+	padding: 29px 120px
 	align-items: center
-	border-bottom: 1px solid rgba(0, 0, 0, 0.05)
 	.logo
 		font-size: 19px
 		font-family: GraphikM, sans-serif
 		text-align: center
+		letter-spacing: -0.063em
 	.menu
 		color: $fontcolor
+		width: 39%
 		&-list
 			display: flex
 			justify-content: space-between
 			align-items: center
 			&-item
-				margin: 0 20px
+				margin-bottom: -8px
 			.active
-				padding: 9px 16px
+				padding: 5px 15px
 				gap: 10px
 				background-color: white
 				border-radius: 17px
-				width: 100px
+				width: 128px
+				cursor: pointer
 			img
-				margin-left: 10px
+				margin-left: 11px
 			a
 				text-decoration: none
 				color: $fontcolor
-
+.bottom-line
+	height: 1px
+	width: 100%
+	background: rgba(0, 0, 0, 0.05)
 .banner
 	display: flex
-	justify-content: space-around
-	padding: 125px 120px 60px 120px
-	&-text-title
-		font-family: GraphikM, sans-serif
-		font-size: 78px
-		line-height: 94%
-		letter-spacing: -0.063em
-		margin-bottom: 40px
+	justify-content: space-between
+	padding: 121px 120px 38px 113px
+	&-text
 		width: 70%
-	&-text-desc
-		font-size: 19px
-		line-height: 118%
-		width: 489px
+		&-title
+			font-family: GraphikM, sans-serif
+			font-size: 78px
+			line-height: 94%
+			letter-spacing: -5.5px
+			margin-bottom: 50px
+			margin-right: 5px
+		&-desc
+			font-size: 19px
+			line-height: 118%
+			width: 460px
+			letter-spacing: -1.5px
+			padding-left: 6px
+			padding-top: 4px
+	&-photo
+		margin-left: 5px
 .showreel
 	background-image: url("../img/showreel.jpg")
-	height: 600px
+	height: 595px
 	cursor: url("../img/cursor.jpg"), auto
 
 .products
-	padding: 20px 110px
+	padding: 35px 101px
 	&-header
 		display: flex
 		padding-left: 13px
 		margin: 60px auto
 		&-title
-			width: 50%
+			width: 48%
 			font-size: 32px
-			line-height: 94%
+			line-height: 97%
 			letter-spacing: -0.033em
 			font-family: GraphikM, sans-serif
 			.button
 				width: 117px
 				height: 31px
-				margin-top: 15px
+				margin-top: 20px
 				font-size: 16px
 				border-radius: 31px
 				border: 1px solid $fontcolor
@@ -107,29 +118,33 @@ body textarea:required:valid
 					color: $fontcolor
 
 		&-desc
-			width: 50%
+			width: 48%
 			font-size: 19px
 			line-height: 116%
 			letter-spacing: -0.063em
-			padding-left: 13px
+			padding-left: 38px
 	&-list
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
 		&-item
-			width: 50%
+			width: 49%
+			margin-right: -8px
+			margin-left: 15px
+			margin-bottom: 47px
 			.img
 				text-align: center
-				width: 583px
+				width: 573px
 				img
 					width: 100%
 			a
 				text-decoration: none
 				color: $fontcolor
 				.title
-					padding-left: 13px
-					margin: 20px 0
+					margin: 16px 0
+					padding-top: 10px
 					font-size: 17px
+					letter-spacing: -0.043em
 					span
 						display: block
 						&:last-child
@@ -151,50 +166,40 @@ body textarea:required:valid
 			text-align: center
 .skills
 	background: #191B1D
-	padding: 60px 120px
+	padding: 22px 85px
+	height: 560px
 	&-title
 		margin: 20px
 		color: white
 		font-size: 18px
 		font-family: GraphikM, sans-serif
+		letter-spacing: -0.043em
 	&-body
 		display: flex
 		justify-content: space-between
 		.accordion
 			align-self: center
 			margin-right: 20px
-			.tab
-				position: relative
-				margin-bottom: 1px
-				width: 100%
-				color: #fff
-				overflow: hidden
-				padding: 20px 0
-				border-bottom: 1px solid rgba(255, 255, 255, 0.14)
-				input
-					position: absolute
-					opacity: 0
-					z-index: -1
-					&:checked ~ .tab-content
-						max-height: 100vh
-				label
-					position: relative
-					display: block
-					padding: 0 0 0 1em
-					font-size: 28px
-					line-height: 108%
-					letter-spacing: -0.063em
-					cursor: pointer
-			.tab-content
-				max-height: 0
-				overflow: hidden
-				transition: max-height .35s
-				p
-					padding-left: 30px
-					width: 60%
-					line-height: 126%
-					color: rgba(255, 255, 255, 0.5)
-
+			width: 35%
+			&-item
+				border: none
+				&:first-of-type .accordion-button
+					border: none
+			&-button
+				color: white
+				background: #191b1d
+				font-size: 28px
+				padding: 15px
+				&:after
+					background-image: url("../img/down-arr.svg")
+					background-size: 1.15rem
+				&:focus
+					box-shadow: none
+				&:not(.collapsed)::after
+					background-image: url("../img/down-arr.svg")
+			.card-body
+				background-color: #191b1d
+				color: white
 .motion
 	padding: 40px 0
 	&-head
