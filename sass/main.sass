@@ -41,7 +41,6 @@ body textarea:required:valid
 		text-align: center
 		letter-spacing: -0.063em
 	.menu
-		color: $fontcolor
 		width: 39%
 		&-list
 			display: flex
@@ -65,6 +64,16 @@ body textarea:required:valid
 	height: 1px
 	width: 100%
 	background: rgba(0, 0, 0, 0.05)
+
+.white-bg
+	background: rgba(255, 255, 255, 0.24)
+
+.white
+	color: white
+
+.white-menu .menu-list a:not(:first-child)
+	color: white
+
 .banner
 	display: flex
 	justify-content: space-between
@@ -90,7 +99,7 @@ body textarea:required:valid
 .showreel
 	background-image: url("../img/showreel.jpg")
 	height: 595px
-	cursor: url("../img/cursor.jpg"), auto
+	cursor: url("../img/cursor.png"), auto
 
 .products
 	padding: 35px 101px
@@ -166,8 +175,7 @@ body textarea:required:valid
 			text-align: center
 .skills
 	background: #191B1D
-	padding: 22px 85px
-	height: 560px
+	padding: 22px 85px 150px
 	&-title
 		margin: 20px
 		color: white
@@ -183,29 +191,41 @@ body textarea:required:valid
 			width: 35%
 			&-item
 				border: none
+				border-bottom: 1px solid rgba(255, 255, 255, 0.14)
 				&:first-of-type .accordion-button
 					border: none
 			&-button
 				color: white
 				background: #191b1d
 				font-size: 28px
-				padding: 15px
+				padding: 20px
 				&:after
 					background-image: url("../img/down-arr.svg")
-					background-size: 1.15rem
+					background-size: 10px
+					background-color: #3B3D3F
+					background-position: center
+					width: 25px
+					height: 25px
+					border-radius: 20px
 				&:focus
 					box-shadow: none
 				&:not(.collapsed)::after
-					background-image: url("../img/down-arr.svg")
+					background-image: url("../img/arrow.svg")
+					background-size: 10px
+					background-color: white
+					background-position: center
+					width: 25px
+					height: 25px
+					border-radius: 20px
 			.card-body
 				background-color: #191b1d
 				color: white
 .motion
-	padding: 40px 0
+	padding-bottom: 50px
 	&-head
 		display: flex
 		justify-content: space-between
-		margin: 80px 50px
+		padding: 100px 105px
 		&-title
 			font-size: 32px
 			color: #191B1D
@@ -220,8 +240,8 @@ body textarea:required:valid
 		ul
 			list-style: none
 			position: absolute
-			top: -70px
-			left: 10px
+			top: -98px
+			left: 71px
 			display: flex
 			cursor: pointer
 			li.prev
@@ -261,6 +281,68 @@ body textarea:required:valid
 	text-align: center
 	font-size: 15px
 	color: rgba(0, 0, 0, 0.4)
+	padding: 30px
+
+//project page styles
+
+.bg-proj
+	background-image: url("../img/project.png")
+	background-position: top
+	height: 450px
+
+.project-title
+	color: white
+	letter-spacing: -0.063em
+	padding: 65px 113px
+	h1
+		font-family: GraphikM, sans-serif
+		font-size: 65px
+	span
+		font-size: 19px
+
+.pr-about
+	display: flex
+	justify-content: space-around
+	align-content: stretch
+	align-items: flex-start
+	flex-wrap: nowrap
+	padding: 100px 123px
+	> div
+		flex: 1 1 50%
+	&-left
+		h2
+			font-family: GraphikM, sans-serif
+			font-size: 32px
+		span
+			font-size: 17px
+			color: rgba(25, 27, 29, 0.6)
+		ul
+			list-style: none
+			display: flex
+			flex-wrap: wrap
+			width: 60%
+			padding: 0
+			margin: 0
+			li
+				padding: 8px 16px
+				margin: 5px
+				border: 1px solid #000000
+				border-radius: 31px
+				text-align: center
+				font-family: GraphikM, sans-serif
+	&-desc
+		align-self: center
+		font-size: 19px
+		line-height: 125.5%
+		letter-spacing: -0.063em
+		p
+			margin-bottom: 0
+			&:first-child
+				margin-bottom: 10px
+
+
+
+
 
 
 //ALWAYS END
