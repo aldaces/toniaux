@@ -340,9 +340,83 @@ body textarea:required:valid
 			&:first-child
 				margin-bottom: 10px
 
+.video-1
+	display: flex
+	justify-content: center
+	gap: 50px
 
+.pr
+	display: flex
+	justify-content: center
+	gap: 100px
+	padding: 75px 100px
+	.title
+		flex: 1 1 50%
+		h2
+			font-size: 38px
+			font-family: GraphikM, sans-serif
+			width: 80%
+	.desc
+		font-size: 19px
+		line-height: 125.5%
+		letter-spacing: -0.063em
+		flex: 1 1 50%
 
+.pr-2
+	span
+		text-decoration: underline
+		font-family: GraphikM, sans-serif
+	&-list
+		margin: 25px
+		&-item
+			margin-bottom: 20px
+			position: relative
+			&::before
+				position: absolute
+				left: -30px
+				top: 0
+				font-weight: bold
+			&:first-child::before
+				content: '01.'
+			&:nth-child(2n)::before
+				content: '02.'
+			&:last-child::before
+				content: '03.'
+.flow
+	display: flex
+	justify-content: center
+	margin-bottom: 30px
 
+.gallery
+	padding: 50px 105px
+	text-align: center
+	img
+		width: 100%
+		text-align: center
+		display: block
+		margin: 0 auto
+	&-second
+		display: flex
+		justify-content: center
+		gap: 48px
+		margin: 48px auto
+
+.gallery-2
+	.first, .third
+		display: flex
+		gap: 48px
+		margin: 48px 0
+
+.basic
+	&-img, &-vid
+		display: flex
+		justify-content: center
+		gap: 48px
+		margin: 35px 0
+
+.gradient, .test
+	display: flex
+	justify-content: center
 
 
 //ALWAYS END

@@ -6,3 +6,14 @@ $(document).ready(function () {
 		nextArrow: $('.next'),
 	});
 });
+
+//$(document).ready(function () {
+//	let v1 = $(".video");
+//	v1.on("mouseover" , "video" , function(){
+//	this.play();
+//	$( this ).css( "background-color", "black" );
+//});
+//	v1.on("mouseleave", "video" ,function(){
+//	this.pause();
+//	});
+//});
